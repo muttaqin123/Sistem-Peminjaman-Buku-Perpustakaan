@@ -15,9 +15,10 @@ public class DaftarDosen extends AmbilData {
     Map <String, Anggota> dosen = new HashMap();
 
     public DaftarDosen (String NIP, Anggota Dosen) {
-        dosen.put(NIP, Dosen);
+        
         this.NIP=NIP;
         this.Dosen = Dosen;
+        dosen.put(NIP, Dosen);
     }
     
     @Override
