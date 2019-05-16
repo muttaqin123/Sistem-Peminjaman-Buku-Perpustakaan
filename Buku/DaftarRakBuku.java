@@ -27,7 +27,7 @@ public class DaftarRakBuku extends AmbilData{
     @Override
     public void setSQL() {
         sql = ("Insert Into rakbuku("
-                + "idrak,kodebuku,rakprodi,jumlahbuku)"
+                + "idrak,kodebuku,tipebuku,jumlahbuku)"
                 + " Values("
                 + "'"+idrak+"',"
                 + "'"+lemari.getKode_buku()+"',"

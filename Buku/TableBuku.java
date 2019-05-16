@@ -1,6 +1,7 @@
 package Buku;
 
 import Database.conek;
+import com.mysql.jdbc.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -10,7 +11,19 @@ import javax.swing.table.DefaultTableModel;
 
 
 public class TableBuku {
+/*
+    baru = new DaftarBukuBaru("",a);
+            baru   = (DaftarBukuBaru) stat.executeQuery(sql);
+            
+                Object[ ] obj = new Object[5];
+                obj[0] = a..getString("kodebuku"); 
+                obj[1] = res.getString("judulbuku");
+                obj[2] = res.getString("pengarang"); 
+                obj[3] = res.getString("penerbit");
+                obj[4] = res.getString("tahunterbit"); 
 
+                model.addRow(obj);
+                System.out.println("key: " + i + " value: " + hm2.get(i));*/
     private final DefaultTableModel model;
 
     public TableBuku(JTable apa){ 
@@ -25,17 +38,11 @@ public class TableBuku {
     }
     
     public final void getData( ){
-    //menghapus isi table tblGaji
-    //model.getDataVector( ).removeAllElements( );
-    //model.fireTableDataChanged( );
 
         try{
-            //membuat statemen pemanggilan data pada table tblGaji dari database
             Statement stat = (Statement) conek.GetConnection().createStatement( );
             String sql        = "Select * from buku";
             ResultSet res   = stat.executeQuery(sql);
-
-            //penelusuran baris pada tabel tblGaji dari database
             while(res.next ()){
                 Object[ ] obj = new Object[5];
                 obj[0] = res.getString("kodebuku"); 
@@ -51,12 +58,8 @@ public class TableBuku {
         }
     } 
     public final void getCari(String key ){
-    //menghapus isi table tblGaji
-    //model.getDataVector( ).removeAllElements( );
-    //model.fireTableDataChanged( );
-
         try{
-            //membuat statemen pemanggilan data pada table tblGaji dari database
+            
             Statement stat = (Statement) conek.GetConnection().createStatement( );
             String sql        = "SELECT * FROM buku WHERE kodebuku LIKE '%"+key+"%'"
                 + "OR judulbuku LIKE '%"+key+"%' "
@@ -81,14 +84,25 @@ public class TableBuku {
     } 
     
     public final void getHapus(String key ){
-    //menghapus isi table tblGaji
-    //model.getDataVector( ).removeAllElements( );
-    //model.fireTableDataChanged( );
-
+  
         try{
             Statement stat = (Statement) conek.GetConnection().createStatement( );
             String sql     = "DELETE FROM buku WHERE kodebuku = '"+key+"';";
             stat.executeUpdate(sql);
+
+        }catch(SQLException err){
+            JOptionPane.showMessageDialog(null, err.getMessage() );
+        }
+    } 
+    public final void getUpdate(String kode,String Judul,String Pengarang,String Penerbit,String tahun){
+        try{
+            
+            String sql = "UPDATE buku SET judulbuku= '"+Judul+"',pengarang= '"+Pengarang
+                    +"',penerbit= '"+Penerbit+"',tahunterbit= '"+tahun+"' where kodebuku = '"+kode+"';";
+            java.sql.Connection conn = (Connection)conek.GetConnection();
+            java.sql.PreparedStatement pst = conn.prepareStatement(sql);
+            pst.execute();
+            JOptionPane.showMessageDialog(null, "data berhasil di update");
 
         }catch(SQLException err){
             JOptionPane.showMessageDialog(null, err.getMessage() );

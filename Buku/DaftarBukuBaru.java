@@ -42,6 +42,5 @@ public class DaftarBukuBaru extends AmbilData{
                 + "'"+ITERA.getPenerbit()+"',"
                 + "'"+ITERA.getTahun()+"');");    
     }
-
     
 }
