@@ -11,29 +11,20 @@ import javax.swing.table.DefaultTableModel;
 
 
 public class TableBuku {
-/*
-    baru = new DaftarBukuBaru("",a);
-            baru   = (DaftarBukuBaru) stat.executeQuery(sql);
-            
-                Object[ ] obj = new Object[5];
-                obj[0] = a..getString("kodebuku"); 
-                obj[1] = res.getString("judulbuku");
-                obj[2] = res.getString("pengarang"); 
-                obj[3] = res.getString("penerbit");
-                obj[4] = res.getString("tahunterbit"); 
 
-                model.addRow(obj);
-                System.out.println("key: " + i + " value: " + hm2.get(i));*/
     private final DefaultTableModel model;
 
     public TableBuku(JTable apa){ 
         model = new DefaultTableModel ( );
         apa.setModel(model);
-        model.addColumn("kodebuku");
-        model.addColumn("judulbuku");
+        model.addColumn("kode buku");
+        model.addColumn("judul buku");
         model.addColumn("pengarang");
         model.addColumn("penerbit");
         model.addColumn("tahunterbit"); 
+        model.addColumn("ID Rak");
+        model.addColumn("Tipe Buku");
+        model.addColumn("Jumlah Buku"); 
         //getData(); 
     }
     
@@ -41,15 +32,18 @@ public class TableBuku {
 
         try{
             Statement stat = (Statement) conek.GetConnection().createStatement( );
-            String sql        = "Select * from buku";
+            String sql        = "Select * from buku natural join rakbuku";
             ResultSet res   = stat.executeQuery(sql);
             while(res.next ()){
-                Object[ ] obj = new Object[5];
+                Object[ ] obj = new Object[8];
                 obj[0] = res.getString("kodebuku"); 
                 obj[1] = res.getString("judulbuku");
                 obj[2] = res.getString("pengarang"); 
                 obj[3] = res.getString("penerbit");
                 obj[4] = res.getString("tahunterbit"); 
+                obj[5] = res.getString("idrak"); 
+                obj[6] = res.getString("tipebuku");
+                obj[7] = res.getString("jumlahbuku"); 
 
                 model.addRow(obj);
             }
@@ -58,10 +52,10 @@ public class TableBuku {
         }
     } 
     public final void getCari(String key ){
+    
         try{
-            
             Statement stat = (Statement) conek.GetConnection().createStatement( );
-            String sql        = "SELECT * FROM buku WHERE kodebuku LIKE '%"+key+"%'"
+            String sql        = "SELECT * FROM buku natural join rakbuku WHERE  kodebuku LIKE '%"+key+"%'"
                 + "OR judulbuku LIKE '%"+key+"%' "
                 + "OR pengarang LIKE '%"+key+"%'"
                 + "OR penerbit LIKE '%"+key+"%'"
@@ -69,12 +63,15 @@ public class TableBuku {
             ResultSet res   = stat.executeQuery(sql);
 
             while(res.next ()){
-                Object[ ] obj = new Object[5];
+                Object[ ] obj = new Object[8];
                 obj[0] = res.getString("kodebuku"); 
                 obj[1] = res.getString("judulbuku");
                 obj[2] = res.getString("pengarang"); 
                 obj[3] = res.getString("penerbit");
                 obj[4] = res.getString("tahunterbit"); 
+                obj[5] = res.getString("idrak"); 
+                obj[6] = res.getString("tipebuku");
+                obj[7] = res.getString("jumlahbuku"); 
 
                 model.addRow(obj);
             }
@@ -84,7 +81,7 @@ public class TableBuku {
     } 
     
     public final void getHapus(String key ){
-  
+    
         try{
             Statement stat = (Statement) conek.GetConnection().createStatement( );
             String sql     = "DELETE FROM buku WHERE kodebuku = '"+key+"';";
