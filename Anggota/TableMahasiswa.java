@@ -50,9 +50,12 @@ public class TableMahasiswa{
         }
     } 
     public final void getCari(String key ){
+    //menghapus isi table tblGaji
+    //model.getDataVector( ).removeAllElements( );
+    //model.fireTableDataChanged( );
 
         try{
-            
+            //membuat statemen pemanggilan data pada table tblGaji dari database
             Statement stat = (Statement) conek.GetConnection().createStatement( );
             String sql        = "SELECT * FROM mahasiswa WHERE NIM LIKE '%"+key+"%'"
                 + "OR nama LIKE '%"+key+"%'"
@@ -78,9 +81,12 @@ public class TableMahasiswa{
     } 
     
     public final void getHapus(String key ){
-  
+    //menghapus isi table tblGaji
+    //model.getDataVector( ).removeAllElements( );
+    //model.fireTableDataChanged( );
+
         try{
-           
+            //membuat statemen pemanggilan data pada table tblGaji dari database
             Statement stat = (Statement) conek.GetConnection().createStatement( );
             String sql     = "DELETE FROM mahasiswa WHERE NIM = '"+key+"';";
             stat.executeUpdate(sql);

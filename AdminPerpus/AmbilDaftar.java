@@ -15,16 +15,6 @@ public abstract class AmbilDaftar {
     
     public abstract void setSQL(String username,String password);
     
-    
-    public boolean validasiUser(String u,String p){
-        setSQL(u,p);
-        return (
-            !u.isEmpty() && !p.isEmpty() 
-        );
-    }
-    
-//    SIGN UP
-    
     public  abstract boolean  validasiData();
    
     public void Pesan(String text){
@@ -36,14 +26,10 @@ public abstract class AmbilDaftar {
         try {
             st = Koneksi.createStatement();
             st.executeUpdate(sql);
-            Pesan("Berhasil ditambahkan");
+            Pesan("Berhasil");
             return 0;
         } catch (SQLException ex) {
-
-            
-                Pesan(
-                   "Gagal Mendaftar \n"+
-                            ex.getMessage());   
+            Pesan("Gagal Mendaftar \n"+ex.getMessage());   
             
         
         }
@@ -51,4 +37,3 @@ public abstract class AmbilDaftar {
    }
    public abstract  void setSQL();
 }
-

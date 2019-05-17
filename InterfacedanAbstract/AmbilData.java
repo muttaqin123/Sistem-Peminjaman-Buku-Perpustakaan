@@ -1,6 +1,5 @@
 package InterfacedanAbstract;
 
-import InterfacedanAbstract.TemplateData;
 import Database.Koneksi;
 import java.sql.Connection;
 import java.sql.ResultSet;
