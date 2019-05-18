@@ -132,6 +132,33 @@ public class menuadmin extends javax.swing.JFrame {
         jLabel35 = new javax.swing.JLabel();
         pengembalian = new javax.swing.JButton();
         jLabel34 = new javax.swing.JLabel();
+        tampilDataMhs = new javax.swing.JPanel();
+        jPanel6 = new javax.swing.JPanel();
+        cancelMeuMhs = new javax.swing.JButton();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTable4 = new javax.swing.JTable();
+        Mhs_cari = new javax.swing.JTextField();
+        jLabel24 = new javax.swing.JLabel();
+        cari_mhs = new javax.swing.JButton();
+        deletemhs = new javax.swing.JButton();
+        Nim_delete = new javax.swing.JTextField();
+        jLabel41 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
+        jLabel44 = new javax.swing.JLabel();
+        tampildataadmin = new javax.swing.JPanel();
+        jPanel8 = new javax.swing.JPanel();
+        cancelMenuAdmin = new javax.swing.JButton();
+        jScrollPane8 = new javax.swing.JScrollPane();
+        tabeladmin = new javax.swing.JTable();
+        admin_cari = new javax.swing.JTextField();
+        jLabel36 = new javax.swing.JLabel();
+        cari_admin = new javax.swing.JButton();
+        deleteadmin = new javax.swing.JButton();
+        delete_admin = new javax.swing.JTextField();
+        jLabel37 = new javax.swing.JLabel();
+        jLabel38 = new javax.swing.JLabel();
+        jLabel40 = new javax.swing.JLabel();
         tampilDataBuku = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         cancelMeuTampilBuku = new javax.swing.JButton();
@@ -971,6 +998,273 @@ public class menuadmin extends javax.swing.JFrame {
 
         getContentPane().add(peminjaman, "card7");
 
+        jPanel6.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel6.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel6.setLayout(null);
+
+        cancelMeuMhs.setText("CANCEL");
+        cancelMeuMhs.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cancelMeuMhsActionPerformed(evt);
+            }
+        });
+        jPanel6.add(cancelMeuMhs);
+        cancelMeuMhs.setBounds(320, 563, 145, 30);
+
+        jTable4.setAutoCreateRowSorter(true);
+        jTable4.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4", "Title 5", "Title 6"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Object.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jScrollPane4.setViewportView(jTable4);
+
+        jPanel6.add(jScrollPane4);
+        jScrollPane4.setBounds(500, 430, 614, 184);
+
+        Mhs_cari.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Mhs_cariActionPerformed(evt);
+            }
+        });
+        jPanel6.add(Mhs_cari);
+        Mhs_cari.setBounds(210, 390, 150, 30);
+
+        jLabel24.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel24.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel24.setText("Cari Mahasiswa");
+        jPanel6.add(jLabel24);
+        jLabel24.setBounds(70, 390, 120, 20);
+
+        cari_mhs.setText("CARI");
+        cari_mhs.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cari_mhsActionPerformed(evt);
+            }
+        });
+        jPanel6.add(cari_mhs);
+        cari_mhs.setBounds(210, 440, 70, 30);
+
+        deletemhs.setText("DELETE");
+        deletemhs.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deletemhsActionPerformed(evt);
+            }
+        });
+        jPanel6.add(deletemhs);
+        deletemhs.setBounds(210, 560, 69, 30);
+        jPanel6.add(Nim_delete);
+        Nim_delete.setBounds(210, 500, 150, 30);
+
+        jLabel41.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel41.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel41.setText("NIM");
+        jPanel6.add(jLabel41);
+        jLabel41.setBounds(80, 510, 30, 17);
+
+        jLabel27.setFont(new java.awt.Font("Eras Bold ITC", 1, 36)); // NOI18N
+        jLabel27.setText("CARI DATA MAHASISWA");
+        jPanel6.add(jLabel27);
+        jLabel27.setBounds(242, 154, 495, 42);
+        jPanel6.add(jLabel31);
+        jLabel31.setBounds(190, 120, 0, 0);
+
+        jLabel44.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Foto/perpustera.png"))); // NOI18N
+        jLabel44.setToolTipText("");
+        jLabel44.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        jPanel6.add(jLabel44);
+        jLabel44.setBounds(0, 0, 1287, 730);
+
+        javax.swing.GroupLayout tampilDataMhsLayout = new javax.swing.GroupLayout(tampilDataMhs);
+        tampilDataMhs.setLayout(tampilDataMhsLayout);
+        tampilDataMhsLayout.setHorizontalGroup(
+            tampilDataMhsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(tampilDataMhsLayout.createSequentialGroup()
+                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 1474, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        tampilDataMhsLayout.setVerticalGroup(
+            tampilDataMhsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, 631, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(tampilDataMhs, "card6");
+
+        jPanel8.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel8.setForeground(new java.awt.Color(255, 255, 255));
+
+        cancelMenuAdmin.setText("CANCEL");
+        cancelMenuAdmin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cancelMenuAdminActionPerformed(evt);
+            }
+        });
+
+        tabeladmin.setAutoCreateRowSorter(true);
+        tabeladmin.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4", "Title 5", "Title 6"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Object.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jScrollPane8.setViewportView(tabeladmin);
+
+        admin_cari.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                admin_cariActionPerformed(evt);
+            }
+        });
+
+        jLabel36.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel36.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel36.setText("Cari Admin");
+
+        cari_admin.setText("CARI");
+        cari_admin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cari_adminActionPerformed(evt);
+            }
+        });
+
+        deleteadmin.setText("DELETE");
+        deleteadmin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteadminActionPerformed(evt);
+            }
+        });
+
+        delete_admin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                delete_adminActionPerformed(evt);
+            }
+        });
+
+        jLabel37.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel37.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel37.setText("NIP Admin");
+
+        jLabel38.setFont(new java.awt.Font("Eras Bold ITC", 1, 36)); // NOI18N
+        jLabel38.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel38.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel38.setText("CARI DATA ADMIN");
+
+        jLabel40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Foto/perpustera.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGap(460, 460, 460)
+                .addComponent(jLabel38, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGap(150, 150, 150)
+                .addComponent(deleteadmin, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGap(330, 330, 330)
+                .addComponent(cancelMenuAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGap(150, 150, 150)
+                .addComponent(cari_admin))
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGap(150, 150, 150)
+                .addComponent(delete_admin, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGap(500, 500, 500)
+                .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 614, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGap(150, 150, 150)
+                .addComponent(admin_cari, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(jLabel40, javax.swing.GroupLayout.PREFERRED_SIZE, 1260, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGap(124, 124, 124)
+                .addComponent(jLabel38, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(306, 306, 306)
+                .addComponent(deleteadmin, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(cancelMenuAdmin))
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGap(490, 490, 490)
+                .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGap(430, 430, 430)
+                .addComponent(cari_admin))
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGap(390, 390, 390)
+                .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGap(480, 480, 480)
+                .addComponent(delete_admin, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGap(370, 370, 370)
+                .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGap(380, 380, 380)
+                .addComponent(admin_cari, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(jLabel40, javax.swing.GroupLayout.PREFERRED_SIZE, 640, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+
+        javax.swing.GroupLayout tampildataadminLayout = new javax.swing.GroupLayout(tampildataadmin);
+        tampildataadmin.setLayout(tampildataadminLayout);
+        tampildataadminLayout.setHorizontalGroup(
+            tampildataadminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        tampildataadminLayout.setVerticalGroup(
+            tampildataadminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(tampildataadmin, "card10");
+
         tampilDataBuku.setBackground(new java.awt.Color(255, 255, 255));
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
@@ -1383,6 +1677,39 @@ public class menuadmin extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_logoutadminMouseClicked
 
+    private void cancelMenuAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelMenuAdminActionPerformed
+        tampildataadmin.setVisible(false);
+        Menuawal.setVisible(true);
+    }//GEN-LAST:event_cancelMenuAdminActionPerformed
+
+    private void admin_cariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_admin_cariActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_admin_cariActionPerformed
+
+    private void cari_adminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cari_adminActionPerformed
+        Menuawal.setVisible(false);
+        tampildataadmin.setVisible(true);
+        
+        TableAdmin a = new TableAdmin(tabeladmin);
+        a.getCari(admin_cari.getText());
+        admin_cari.setText("");                            
+        
+    }//GEN-LAST:event_cari_adminActionPerformed
+
+    private void deleteadminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteadminActionPerformed
+        Menuawal.setVisible(false);
+        tampildataadmin.setVisible(true);
+        
+        TableAdmin a = new TableAdmin(tabeladmin);
+        a.getHapus(delete_admin.getText());
+        delete_admin.setText("");
+        a.getData();
+    }//GEN-LAST:event_deleteadminActionPerformed
+
+    private void delete_adminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_delete_adminActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_delete_adminActionPerformed
+
     private void AdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AdminMouseClicked
         Menuawal.setVisible(false);
         tampildataadmin.setVisible(true);
@@ -1466,6 +1793,36 @@ public class menuadmin extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_kodeActionPerformed
 
+    private void deletemhsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deletemhsActionPerformed
+        Menuawal.setVisible(false);
+        tampilDataMhs.setVisible(true);
+
+        TableMahasiswa a = new TableMahasiswa(jTable4);
+        a.getHapus(Nim_delete.getText());
+        Nim_delete.setText("");
+        a.getData();
+    }//GEN-LAST:event_deletemhsActionPerformed
+
+    private void cari_mhsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cari_mhsActionPerformed
+        // TODO add your handling code here:
+        Menuawal.setVisible(false);
+        tampilDataMhs.setVisible(true);
+
+        TableMahasiswa a = new TableMahasiswa(jTable4);
+        a.getCari(Mhs_cari.getText());
+        Mhs_cari.setText("");
+    }//GEN-LAST:event_cari_mhsActionPerformed
+
+    private void Mhs_cariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Mhs_cariActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Mhs_cariActionPerformed
+
+    private void cancelMeuMhsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelMeuMhsActionPerformed
+        // TODO add your handling code here:
+        Menuawal.setVisible(true);
+        tampilDataMhs.setVisible(false);
+    }//GEN-LAST:event_cancelMeuMhsActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1507,8 +1864,10 @@ public class menuadmin extends javax.swing.JFrame {
     private javax.swing.JLabel Admin;
     private javax.swing.JLabel Anggota;
     private javax.swing.JPanel Menuawal;
+    private javax.swing.JTextField Mhs_cari;
     private javax.swing.JTextField NAMA;
     private javax.swing.JTextField NIP;
+    private javax.swing.JTextField Nim_delete;
     private javax.swing.JComboBox<String> Prodi;
     private javax.swing.JComboBox<String> STATUS;
     private javax.swing.JComboBox<String> STATUS1;
@@ -1516,14 +1875,19 @@ public class menuadmin extends javax.swing.JFrame {
     private javax.swing.JTextField TELEPON;
     private javax.swing.JTable TableTambahBuku;
     private javax.swing.JTable Tabletambahanggota;
+    private javax.swing.JTextField admin_cari;
     private javax.swing.JTextField buku_delete;
+    private javax.swing.JButton cancelMenuAdmin;
     private javax.swing.JButton cancelMenuAnggota;
     private javax.swing.JButton cancelMenuPinjam;
+    private javax.swing.JButton cancelMeuMhs;
     private javax.swing.JButton cancelMeuTampilBuku;
     private javax.swing.JButton cancelMeuTampilBuku1;
     private javax.swing.JButton cancelTambahBuku;
+    private javax.swing.JButton cari_admin;
     private javax.swing.JButton cari_anggota;
     private javax.swing.JButton cari_buku;
+    private javax.swing.JButton cari_mhs;
     private javax.swing.JLabel caribuku;
     private javax.swing.JTextField caribuku_;
     private javax.swing.JLabel caridosen;
@@ -1531,7 +1895,10 @@ public class menuadmin extends javax.swing.JFrame {
     private javax.swing.JLabel daftaradmin;
     private javax.swing.JButton delete;
     private javax.swing.JButton delete1;
+    private javax.swing.JTextField delete_admin;
     private javax.swing.JTextField delete_dosen;
+    private javax.swing.JButton deleteadmin;
+    private javax.swing.JButton deletemhs;
     private javax.swing.JTextField dosen_cari;
     private javax.swing.JTextField id_peminjam;
     private javax.swing.JTextField id_pinjambuku;
@@ -1552,19 +1919,28 @@ public class menuadmin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -1575,13 +1951,18 @@ public class menuadmin extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel8;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
+    private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
+    private javax.swing.JTable jTable4;
     private javax.swing.JTextField judulbuku;
     private javax.swing.JTextField jumlah;
     private javax.swing.JTextField kode;
@@ -1594,6 +1975,7 @@ public class menuadmin extends javax.swing.JFrame {
     private javax.swing.JTextField pengarang;
     private javax.swing.JButton pengembalian;
     private javax.swing.JLabel pinjam;
+    private javax.swing.JTable tabeladmin;
     private javax.swing.JTextField tahun;
     private javax.swing.JButton tambah;
     private javax.swing.JButton tambah1;
@@ -1601,6 +1983,8 @@ public class menuadmin extends javax.swing.JFrame {
     private javax.swing.JButton tambahbukubaru;
     private javax.swing.JPanel tampilDataBuku;
     private javax.swing.JPanel tampilDataDosen;
+    private javax.swing.JPanel tampilDataMhs;
+    private javax.swing.JPanel tampildataadmin;
     private javax.swing.JButton tampildosen;
     private javax.swing.JButton tampilmhs;
     private javax.swing.JTextField tgl_pinjam;
