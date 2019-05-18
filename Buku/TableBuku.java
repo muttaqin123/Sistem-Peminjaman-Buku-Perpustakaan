@@ -86,7 +86,7 @@ public class TableBuku {
             Statement stat = (Statement) conek.GetConnection().createStatement( );
             String sql     = "DELETE FROM buku WHERE kodebuku = '"+key+"';";
             stat.executeUpdate(sql);
-
+ 
         }catch(SQLException err){
             JOptionPane.showMessageDialog(null, err.getMessage() );
         }
